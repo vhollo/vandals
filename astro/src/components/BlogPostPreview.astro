@@ -9,12 +9,13 @@ const { post } = Astro.props;
 ---
 
 <article class="post-preview__article">
-    <a href={`/blog/${post.slug.current}`}>
-      {post.mainImage && <img width="720" height="420" class="post-main__img" loading="lazy" src={getSanityImageUrl(post.mainImage).url()} />}
-      <h1 class="title">{post.title}</h1>
-      <time class="publish-date">{formatBlogPostDate(post.publishedAt)}</time>
-      <p>{post.excerpt}</p>
-    </a>
+  <!--<h6>{post.category}</h6>-->
+  <a href={`/blog/${post.slug.current}`}>
+    {post.mainImage && <img width="720" height="420" class="post-main__img" loading="lazy" src={getSanityImageUrl(post.mainImage).url()} />}
+    <h1 class="title">{post.title}</h1>
+    <time class="publish-date">{formatBlogPostDate(post.publishedAt)}</time>
+    <p>{post.excerpt}</p>
+  </a>
 </article>
 
 <style>
