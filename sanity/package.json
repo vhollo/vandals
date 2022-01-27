@@ -1,10 +1,10 @@
 {
-  "name": "sanityminimalstarter",
+  "name": "vandals.hu",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Jaydan Urwin <jaydan@jaydanurwin.com>",
+  "author": "YellObellO <dev@yellobello.com>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",

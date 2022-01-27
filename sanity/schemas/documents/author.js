@@ -1,6 +1,6 @@
 export default {
   name: 'author',
-  title: 'Author',
+  title: 'Location (of Vandalism)',
   type: 'document',
   fields: [
     {
@@ -27,7 +27,9 @@ export default {
     },
     {
       name: 'bio',
-      title: 'Bio',
+      title: 'Description of destruction',
+      // Only want the bio to be localized in this case
+      localize: true,
       type: 'array',
       of: [
         {
@@ -39,10 +41,4 @@ export default {
       ],
     },
   ],
-  preview: {
-    select: {
-      title: 'name',
-      media: 'image',
-    },
-  },
 }

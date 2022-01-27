@@ -5,7 +5,7 @@
     "dataset": "production"
   },
   "project": {
-    "name": "Sanity Minimal Starter"
+    "name": "Vandals of Hungary"
   },
   "plugins": [
     "@sanity/base",

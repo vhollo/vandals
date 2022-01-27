@@ -1,7 +1,13 @@
+import { i18n } from './documentTranslation'
+
 export default {
   name: 'post',
   title: 'Post',
   type: 'document',
+  // The next property enables full-document translation for this document
+  // via the sanity-intl plugin. You can of course modify this object should you
+  // need to on a document-to-document bassis.
+  i18n,
   fields: [
     {
       name: 'title',
@@ -26,7 +32,7 @@ export default {
     {
       name: 'mainImage',
       title: 'Main image',
-      type: 'image',
+      type: 'captionImage',
       options: {
         hotspot: true,
       },
