@@ -38,26 +38,36 @@ export default {
     },
     {
       type: 'openGraph',
-      name: 'openGraph',
-      localize: false
+      name: 'openGraph'
     },
     {
       type: 'image',
       name: 'image',
       options: {
         hotspot: true
-      },
-      localize: false
+      }
     },
     {
-      title: 'Body',
       type: 'blockContent',
       name: 'body'
     },
     {
       type: 'reference',
-      name: 'author',
-      to: [{ type: 'author' }]
+      name: 'location',
+      to: [{ type: 'location' }]
+    },
+    {
+      type: 'array',
+      name: 'authors',
+      // We probably don't want localized versions of this reference array, so
+      // we opt out of localizing this specific field
+      localize: false,
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'author' }]
+        }
+      ]
     }
   ]
 }

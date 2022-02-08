@@ -1,18 +1,19 @@
 {
   "root": true,
+  "project": {
+    "name": "Studioo with Localization"
+  },
   "api": {
     "projectId": "j8hrdccx",
     "dataset": "production"
   },
-  "project": {
-    "name": "Vandals of Hungary"
-  },
   "plugins": [
     "@sanity/base",
+    "@sanity/components",
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "@sanity/code-input"
+    "intl-input"
   ],
   "env": {
     "development": {
@@ -25,6 +26,10 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./deskStructure.js"
     }
   ]
 }

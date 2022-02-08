@@ -35,15 +35,15 @@ Follow the manual steps below:
 1. [Create a repo from this template](https://github.com/jaydanurwin/astro-sanity-minimal-starter/generate)
 2. If you don't have the Sanity CLI already run `npm install -g @sanity/cli`
 3. Open a terminal from root folder of the project
-4. `cd sanity`
+4. `cd studio`
 5. `sanity install`
 6. `sanity init` and follow the prompts (you will need to create a Sanity account if you haven't already)
-7. `npm run graphql-deploy`
-   1. Take note of the graphql API url it outputs once finished
+<!--7. `npm run graphql-deploy`-->
+   <!--1. Take note of the graphql API url it outputs once finished-->
 8. Navigate to the astro folder
 7. Rename `.env.template` to `.env` and 
 8. Replace the PUBLIC_SANITY_PROJECT_ID value with your token ID
-9. Replace the PUBLIC_SANITY_GRAPHQL_URL value with your GraphQL URL
+<!--9. Replace the PUBLIC_SANITY_GRAPHQL_URL value with your GraphQL URL-->
 
 **Note:** You will want to add http://localhost:3000 to your allowed CORS orgins in your Sanity project settings at [https://manage.sanity.io](https://manage.sanity.io)
  

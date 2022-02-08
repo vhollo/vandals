@@ -11,33 +11,44 @@ const builder = imageUrlBuilder(client);
 //     return `${import.meta.env.PUBLIC_SANITY_GRAPHQL_URL}?query=${query}`;
 // }
 
-export async function getSanityContent({ query, variables = {} }) {
-  const { data } = await fetch(
-    `${import.meta.env.PUBLIC_SANITY_GRAPHQL_URL}`,
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        query,
-        variables,
-      }),
-    },
-  ).then((response) => response.json());
-  return data;
-}
+//export async function getSanityContent({ query, variables = {} }) {
+//  const { data } = await fetch(
+//    `${import.meta.env.PUBLIC_SANITY_GRAPHQL_URL}`,
+//    {
+//      method: 'POST',
+//      headers: {
+//        'Content-Type': 'application/json',
+//      },
+//      body: JSON.stringify({
+//        query,
+//        variables,
+//      }),
+//    },
+//  ).then((response) => response.json()
+//  )//.then((json) => console.log(json.data));
+  
+//  //console.log({data});
+//  return data;
+//}
+
+//export async function getSanityContent(query/*{ query, variables = {} }*/) {
+//  const data = await client.fetch(`* [_type == 'post'] { ${query} }`)
+//  //console.log({data});
+//  return data
+//}
 
 export function formatBlogPostDate ( date ) {
-    const dateString = parseISO( date, "YYYY/MM/Do" );
-    const formattedDateString = format( dateString, "MMMM do, yyyy" );
-    return `${ formattedDateString }`;
-  }
+  if (!date) return ''
+  const dateString = parseISO( date, "YYYY/MM/Do" );
+  const formattedDateString = format( dateString, "MMMM do, yyyy" );
+  return `${ formattedDateString }`;
+}
 
 export function getSanityImageUrl(source) {
-    return builder.image(source);
+  console.log({source})
+  return source.asset && builder.image(source);
 }
 
 export async function convertBlockContentToMarkdown (postBody) {
-    return BlocksToMarkdown(postBody);
-  }
+  return BlocksToMarkdown(postBody);
+}
